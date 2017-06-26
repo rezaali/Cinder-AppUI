@@ -31,10 +31,10 @@ SOFTWARE.
 #include "UI.h"
 
 #define USE_WINDOW_CANVAS 0
-#if USE_WINDOW_CANVAS  
+#if USE_WINDOW_CANVAS
 typedef reza::ui::WindowCanvas UIPanel;
 typedef reza::ui::WindowCanvasRef UIPanelRef;
-#else 
+#else
 typedef reza::ui::SuperCanvas UIPanel;
 typedef reza::ui::SuperCanvasRef UIPanelRef;
 #endif
@@ -50,11 +50,11 @@ class AppUI {
 	}
 	virtual ~AppUI();
 
-	bool isHit(const ci::ivec2& input); 
+	bool isHit( const ci::ivec2 &input );
 
-	void minimize(); 
-	void maximize(); 
-	void arrange(); 
+	void minimize();
+	void maximize();
+	void arrange();
 
 	//UI METHODS
 	UIPanelRef getUI( const std::string &name );
@@ -75,8 +75,6 @@ class AppUI {
 	void saveUI( UIPanelRef ui, const ci::fs::path &path );
 
 	std::map<std::string, UIPanelRef> mUIs;
-
-
 };
 } // namespace app
 } // namespace reza
