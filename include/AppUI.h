@@ -30,7 +30,6 @@ SOFTWARE.
 #include "GlslParams.h"
 #include "UI.h"
 
-#define USE_WINDOW_CANVAS 0
 #if USE_WINDOW_CANVAS
 typedef reza::ui::WindowCanvas UIPanel;
 typedef reza::ui::WindowCanvasRef UIPanelRef;
@@ -41,13 +40,14 @@ typedef reza::ui::SuperCanvasRef UIPanelRef;
 
 namespace reza {
 namespace app {
+    
 typedef std::shared_ptr<class AppUI> AppUIRef;
 class AppUI {
   public:
 	static AppUIRef create()
-	{
-		return AppUIRef( new AppUI() );
-	}
+    {
+        return AppUIRef( new AppUI() );
+    }
 	virtual ~AppUI();
 
 	bool isHit( const ci::ivec2 &input );
