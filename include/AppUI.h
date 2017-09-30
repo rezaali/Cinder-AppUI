@@ -30,7 +30,7 @@ SOFTWARE.
 #include "GlslParams.h"
 #include "UI.h"
 
-#ifdef USE_WINDOW_CANVAS
+#if USE_WINDOW_CANVAS
 typedef reza::ui::WindowCanvas UIPanel;
 typedef reza::ui::WindowCanvasRef UIPanelRef;
 #else
