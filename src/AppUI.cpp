@@ -112,7 +112,7 @@ UIPanelRef AppUI::setupUI( std::string name, const std::function<UIPanelRef( UIP
 {
 	auto createUI = []( string name_ ) {
 		auto ui = UIPanel::create( name_ );
-		ui->setPadding( Paddingf( 6 ) );
+		ui->setPadding( Paddingf( 2 ) );
 		return ui;
 	};
 	return addUI( cb( createUI( name ) ) );
